@@ -1,0 +1,61 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+}
+
+.play_board_container {
+  width: 100%;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play_board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.199);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.popup > button {
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.66);
+}
+
+@media only screen and (max-width: 600px) {
+  .play_board {
+    height: 300px;
+    width: 300px;
+  }
+}
